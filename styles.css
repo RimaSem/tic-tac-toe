@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Margarine&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700&display=swap");
+
 body {
   background-color: #f4d03f;
   background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
-  /* font-family: "Roboto", sans-serif; */
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   display: flex;
   align-items: center;
@@ -14,14 +16,21 @@ body {
 }
 
 .container {
-  height: 80%;
-  width: clamp(370px, 50vw, 90%);
+  width: max-content;
+  padding: 0 10%;
   background-color: rgba(0, 0, 0, 0.625);
   border-radius: 6px;
   box-shadow: 0px 0px 10px 2px rgba(85, 85, 85, 0.596);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+h1 {
+  font-family: "Margarine", cursive;
+  color: rgb(197, 181, 12);
+  font-size: 2.5rem;
+  margin-bottom: 15%;
 }
 
 .board {
@@ -31,7 +40,63 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   margin: 0 auto;
-  gap: 5px;
+  margin-bottom: 15%;
+}
+
+/* Draw the board */
+#s1,
+#s2,
+#s4,
+#s5 {
+  border-right: 5px solid rgba(255, 255, 255, 0.67);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.67);
+}
+
+#s3,
+#s6 {
+  border-bottom: 5px solid rgba(255, 255, 255, 0.67);
+}
+
+#s7,
+#s8 {
+  border-right: 5px solid rgba(255, 255, 255, 0.67);
+}
+
+/* Style X and O on the game board */
+.square {
+  font-family: "Margarine", cursive;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.785);
+}
+
+.result {
+  color: rgb(197, 181, 12);
+  font-size: 2rem;
+}
+
+button {
+  margin: 10% 0;
+  width: 40%;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  background-color: #0c1d0dc8;
+  border: none;
+  font-weight: 600;
+  border-radius: 4px;
+  color: rgb(207, 207, 207);
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:active {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 600px) {
