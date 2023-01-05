@@ -1,4 +1,4 @@
-# Tic Tac-Toe
+# Tic-Tac-Toe
 
 This is a simple Tic Tac Toe game where two players take turns putting their markers, and the first to match three in a row wins.
 
